@@ -1,0 +1,33 @@
+Comandos para trabalhar no git
+
+git init ? inicializar o repositório do git
+
+git add ? mover arquivo e dar início ao versionamento
+
+git add * ? adiciona todas os arquivos modificados, colocando eles em staged 
+
+git commit ? cria o commit
+
+git status ? mostra os status dos arquivos
+
+mkdir (make directory) + ‘nome do novo diretório’ ? cria um novo diretório (nova pasta)
+
+cd (change directory) + ‘nome do diretório’ ? possibilita que o usuário navegue entre os diretórios 
+
+ls? mostra uma listagem de todas as pastas (diretórios) contidos naquele diretório
+
+flag -a mostra arquivos ocultos no git
+
+Diretório ? pastas no computador
+
+Repositório ? pastas inicializadas (através do git init), só é preenchido com commits
+
+Chave SSH: 
+
+Uma forma de estabelecer uma conexão segura e confiável entre duas máquinas (por exemplo a nossa pessoal e o GitHub que é baseado em um servidor em nuvem), a partir de duas chaves. 
+A chave SSH é importante para a verificação (segurança) da máquina ao versionar um código no GitHub.
+
+Objetos internos do Git:
+- Blobs: Objeto que contém metadados sobre arquivos dentro de determinado repositório. O hash SHA1 de cada arquivo é armazenado nesses blobs, além do tipo do objeto, tamanho do arquivo, conteúdo, etc. Blobs são blocos básicos de composição;
+- Trees: Trees armazenam blobs e criam a hierarquia dos arquivos em um repositório. Podem apontar para blobs ou para outras árvores. Você pode usar o objeto da árvore do Git para criar a relação entre diretórios e os arquivos que eles contêm. Esses pontos de extremidade permitem que você leia e grave um objeto de árvoreno banco de dados do Git no GitHub. Também podem gerar um SHA1 da árvore;
+- Commits: Objeto que junta as àrvores e blobs e dá sentido para todas as alterações feitas. Aponta para uma árvore (tree), um oarente (último commit realizado), autor (pessoa que realizou o último commit), mensagem (conteúdo, mensagem, do commit) e um timestamp. Além de gerar um SHA1 próprio, sendo o hash de toda essa informação.
